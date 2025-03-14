@@ -1,0 +1,11 @@
+helm dependency update 5gc/oai-5g-advance/
+helm install basic 5gc/oai-5g-advance/ -n oai
+
+
+./UERANSIM/build/nr-gnb -c UERANSIM/build/OAI-gnb.yaml
+
+
+sudo ./UERANSIM/build/nr-ue -c UERANSIM/build/OAI-ue.yaml -i imsi-208950000000032
+
+
+ping -c 3 -I uesimtun0 google.com
