@@ -1,6 +1,7 @@
 helm dependency update 5gc/oai-5g-advance/
 helm install basic 5gc/oai-5g-advance/ -n oai
 
+helm upgrade basic 5gc/oai-5g-advance/ -n oai 
 
 ./UERANSIM/build/nr-gnb -c UERANSIM/build/OAI-gnb.yaml
 
